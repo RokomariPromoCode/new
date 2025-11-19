@@ -1,0 +1,33 @@
+<!-- Header include -->
+<header class="modern-header">
+  <div class="header-container container">
+    <div class="header-logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/logo.png' | relative_url }}" alt="Logo" style="height:45px;">
+      </a>
+    </div>
+
+    <div class="header-search-wrapper">
+      <div class="search-box">
+        <input type="text" id="header-search-input" placeholder="ক্যাটাগরি, বই বা লেখকের নাম খুঁজুন..." autocomplete="off">
+        <i class="fas fa-search search-icon-btn" id="search-lens"></i>
+        <i class="fas fa-times clear-btn" id="search-clear"></i>
+      </div>
+      <div class="search-results-dropdown" id="header-search-results" aria-hidden="true"></div>
+    </div>
+
+    <div class="header-menu">
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/books.html' | relative_url }}">Books</a></li>
+        <li><a href="{{ '/electronics.html' | relative_url }}">Electronics</a></li>
+        <li><a href="{{ '/groceries.html' | relative_url }}">Groceries</a></li>
+        <li><a href="{{ '/ghorer_bazar.html' | relative_url }}">Ghorer Bazar</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </div>
+</header>
