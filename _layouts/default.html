@@ -5,32 +5,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{{ page.title | default: site.title }}</title>
 
-  <!-- Fonts & icons -->
+  <!-- fonts & icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Main CSS (Jekyll-aware) -->
+  <!-- main site styles -->
   <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
-  <!-- Immediate fallback while Pages rebuilds -->
-  <link rel="stylesheet" href="https://rokomaripromocode.github.io/trial/assets/styles.css">
+  <!-- header/footer separated -->
+  <link rel="stylesheet" href="{{ '/assets/header.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/footer.css' | relative_url }}">
 
-  <!-- Logo (use relative_url) -->
-  <link rel="icon" href="{{ '/assets/logo.png' | relative_url }}">
-
+  <script>window.SITE_BASE = "{{ site.baseurl | relative_url }}";</script>
 </head>
 <body>
   {% include header.html %}
-
   <main>
     {{ content }}
   </main>
-
   {% include footer.html %}
-  {% include wa.html %}
 
-  <!-- App script (Jekyll-aware) -->
-  <script>window.SITE_BASE = "{{ site.baseurl | relative_url }}";</script>
+  <!-- per-component JS -->
+  <script src="{{ '/assets/header.js' | relative_url }}"></script>
   <script src="{{ '/assets/app.js' | relative_url }}"></script>
-  <script src="https://rokomaripromocode.github.io/trial/assets/app.js"></script>
+  <script src="{{ '/assets/footer.js' | relative_url }}"></script>
 </body>
 </html>
